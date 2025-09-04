@@ -24,4 +24,46 @@ class KalkulatorTest {
     void testPodzielJezeliLiczbyCalkowiteWynikRzeczywisty(){
         Assertions.assertEquals(3.5,Kalkulator.podziel(7,2));
     }
+
+
+
+    @Test
+    void testCzyLiczbaPierwszaJezeli1(){
+        Assertions.assertFalse(Kalkulator.czyLiczbaPierwsza(1));
+    }
+    @Test
+    void testCzyLiczbaPierwszaJezeli2(){
+        Assertions.assertTrue(Kalkulator.czyLiczbaPierwsza(2));
+    }
+    @Test
+    void testCzyLiczbaPierwszaJezeliPotega(){
+        Assertions.assertFalse(Kalkulator.czyLiczbaPierwsza(25));
+    }
+    @Test
+    void testCzyLiczbaPierwszaJezeliLiczbaParzystaWiekszaOd2(){
+        Assertions.assertFalse(Kalkulator.czyLiczbaPierwsza(10));
+    }
+    @Test
+    void testCzyLiczbaPierwszaJezeliLiczbaPierwsza(){
+        Assertions.assertTrue(Kalkulator.czyLiczbaPierwsza(17));
+    }
+
+
+
+    @Test
+    void testPotegaJezeli0(){
+
+    }
+    @Test
+    void testPotegaJezeliUjemnaLiczba(){
+
+    }
+    @Test
+    void testPotegaJezeliUjemnaPotega(){
+
+    }
+    @Test
+    void testPotegaJezelObieDodatnie(){
+
+    }
 }

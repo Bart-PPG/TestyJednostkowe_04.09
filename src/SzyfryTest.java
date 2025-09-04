@@ -55,4 +55,22 @@ class SzyfryTest {
     void szyfrCezaraAsciiJezeliZZawijaniemWierszyKlucz3() {
         Assertions.assertEquals("ABC",Szyfry.szyfrCezaraAscii("XYZ",3));
     }
+
+
+    @Test
+    void szyfrKwadratemJezeliDlugoscPotegiLiczby(){
+        Assertions.assertEquals("peis",Szyfry.szyfrKwadratowy("pies"));
+    }
+    @Test
+    void szyfrKwadratemJezeliDlugoscMniejszaOdPotegiLiczbyBezPustegoWiersza(){
+        Assertions.assertEquals("crayy tn",Szyfry.szyfrKwadratowy("cytryna"));
+    }
+    @Test
+    void szyfrKwadratemJezeliDlugoscMniejszaOdPotegiLiczbyZPustymWierszem(){
+        Assertions.assertEquals("prs rat oma gi",Szyfry.szyfrKwadratowy("programista"));
+    }
+    @Test
+    void szyfrKwadratemJezeliPusteSlowo(){
+        Assertions.assertEquals("",Szyfry.szyfrKwadratowy(""));
+    }
 }
