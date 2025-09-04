@@ -26,4 +26,24 @@ public class Szyfry {
     }
 
 
+    public static String szyfrCezaraAscii(String slowo, int klucz){
+        String zaszyfrowane = "";
+        klucz = klucz % 26;
+        for (int i = 0; i < slowo.length(); i++) {
+            int kodLitery = (int)slowo.charAt(i)+klucz;
+
+            if(kodLitery >(int)'Z'){
+                kodLitery = kodLitery - 26;
+            }
+            if(kodLitery <(int)'A'){
+                kodLitery = kodLitery + 26;
+            }
+            char litera = (char)kodLitery;
+            zaszyfrowane= zaszyfrowane+litera;
+
+        }
+
+        return zaszyfrowane;
+    }
+
 }
